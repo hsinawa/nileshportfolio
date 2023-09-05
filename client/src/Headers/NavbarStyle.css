@@ -29,16 +29,18 @@ header {
 
 #navbar-item {
   font-size: large;
+  color: rgb(68, 6, 168);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #navtop{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 12px;
+    
 }
 
 #navbar-item:hover {
-   color: rgb(68, 6, 168);
+   color: rgb(170, 217, 0);
   }
 
 nav a {

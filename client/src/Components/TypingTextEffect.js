@@ -14,8 +14,7 @@ const TypingText = ({ text }) => {
         setIndex(0);
         
       }
-    }, 100); // Adjust the typing speed by changing the interval in milliseconds
-
+    }, 100);
     return () => {
       clearInterval(interval);
     };

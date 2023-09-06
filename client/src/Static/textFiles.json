@@ -1,7 +1,17 @@
 {
-    "TopScreen":{
-        "name":"Maximize Your Potential",
-        "slogan":" Concepts Blossom into Brilliance."
-    }
-
+  "TopScreen": {
+    "name": "Maximize Your Potential",
+    "slogan": " Concepts Blossom into Brilliance."
+  },
+  "Marketing": {
+    "Slogans": [
+    [ "Result","Results Matter, We Deliver"],
+     [ "Career Guidance", "Empowering Dreams, Guiding Careers"],
+     [ "Hybrid Learning", "Anywhere, Anytime Learning"],
+      [ "Experienced Faculty", "Expertise You Can Trust"]
+    ]
+  },
+  "AboutUs": {
+    "name": "About Us"
+  }
 }

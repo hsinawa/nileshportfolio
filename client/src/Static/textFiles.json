@@ -13,13 +13,22 @@
   },
   "AboutUs": {
     "name": "About Us",
-   "paras": [
+    "paras": [
       "Nothing succeeds like success and the key ingredients to the recipe of success are hard work, sincerity and perseverance . These are the very values, Nilesh Jaiswal has sworn by since the last many years of his professional life as a teacher.",
       "From a very humble beginning in the year 1995 when the student strength was as meagre as two in number to a substantial increase of 2000 students benefiting from the mentoring by Nilesh. And all this has been achieved without a single press ad and just by a word of mouth publicity.",
       "Students mentored by Nilesh have carved a niche for themselves in the area of engineering, medicine, IT etc .",
       "We aspire to stand by the mentioned core values throught out our professional career."
-    ] ,
-    "offer":"What We Offer",
-    "promise":"Our Promise"
+    ],
+    "WhyUS": "Why Us?",
+    "promise": "Our Promise",
+    "WhyUsPara": "At Concept to Education, we offer an exceptional mathematics and science education. With expert educators, personalized learning, and a passion for excellence, we're committed to shaping academic success. Join us to unlock your potential and embark on a journey of growth and discovery in mathematics and science.",
+    "facilities":[
+        ["Exceptional Faculty", "Highly qualified and experienced educators" ],
+        ["Interactive Learning", "Classes designed to be engaging and interactive" ],
+        ["Holistic Development", "Nurturing academic and character excellence" ]
+    ],
+    "Offers":{
+        "name":"What We Offer"
+    }
   }
 }

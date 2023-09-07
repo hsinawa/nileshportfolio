@@ -21,7 +21,8 @@ const MarketingComponent = () => {
       <Box sx={{ flexGrow: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', width:'90%', marginLeft:'auto', marginRight:'auto' , cursor:'pointer', marginTop:'3%'}}  >
       <Grid container spacing={2}>
         <Grid item xs={10} md={5} lg={3} style={{marginLeft:'auto', marginRight:'auto'}} sx ={{ '&:hover': {
-                transform: 'scale(1.05)' // Increase the size on hover
+                transform: 'scale(1.05)'
+               // Increase the size on hover
               }}} >
         <Card
         variant="outlined"

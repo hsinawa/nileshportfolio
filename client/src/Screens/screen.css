@@ -12,6 +12,11 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h2{
+    font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #gridscreen {
   display: grid;
   margin: 10px;
@@ -29,10 +34,14 @@ h1 {
   margin-right: auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   h1 {
     font-size: 40px;
   }
+  h2{
+    font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
   #offerh1 {
     text-align: center;

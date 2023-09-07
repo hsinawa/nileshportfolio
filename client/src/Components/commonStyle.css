@@ -1,0 +1,64 @@
+.paragraph-circle {
+  text-align: justify;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  margin-top: 5%;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 3%;
+  float: left;
+}
+
+#button{
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10%;
+float: left;
+color:'black';
+background-color: rgb(165, 165, 165);
+}
+
+@media screen and (max-width: 850px) {
+    h3 {
+      font-size: 30px;
+      margin-top: 3%;
+      float: none;
+    }
+  
+    .paragraph-circle {
+      text-align: justify;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+
+    #button{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        float: none;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 30px;
+    margin-top: 3%;
+    float: none;
+  }
+
+  .paragraph-circle {
+    text-align: justify;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}

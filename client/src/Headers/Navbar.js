@@ -37,6 +37,7 @@ function Navbar() {
               alt="Concept2Education"
               style={{
                 width: "70px",
+                marginTop:'-20%'
               }}
             />{" "}
           </a>

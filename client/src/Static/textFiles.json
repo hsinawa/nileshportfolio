@@ -22,13 +22,31 @@
     "WhyUS": "Why Us?",
     "promise": "Our Promise",
     "WhyUsPara": "At Concept to Education, we offer an exceptional mathematics and science education. With expert educators, personalized learning, and a passion for excellence, we're committed to shaping academic success. Join us to unlock your potential and embark on a journey of growth and discovery in mathematics and science.",
-    "facilities":[
-        ["Exceptional Faculty", "Highly qualified and experienced educators" ],
-        ["Interactive Learning", "Classes designed to be engaging and interactive" ],
-        ["Holistic Development", "Nurturing academic and character excellence" ]
+    "facilities": [
+      ["Exceptional Faculty", "Highly qualified and experienced educators"],
+      [
+        "Interactive Learning",
+        "Classes designed to be engaging and interactive"
+      ],
+      ["Holistic Development", "Nurturing academic and character excellence"]
     ],
-    "Offers":{
-        "name":"What We Offer"
+    "Offers": {
+      "name": "What We Offer",
+      "para": "At Concept to Education, we're committed to your academic and personal growth. Our promise is quality education, support, and a pathway to success. Join us on this fulfilling journey.",
+      "courses": [
+        [
+          "Mathematics",
+          "At 'Concept to Education,' we specialize in expert math coaching, serving students from 7th to 12th grade."
+        ],
+        [
+          "Science",
+          "At 'Concept to Education,' we specialize in expert science coaching, serving students from 7th to 10th grade."
+        ],
+        [
+            "E-Learning",
+            "This coaching provides an exclusive app for students, enabling progress tracking, tests, and access to learning modules."
+        ]
+      ]
     }
   }
 }

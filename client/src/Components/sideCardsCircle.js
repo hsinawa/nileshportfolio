@@ -35,17 +35,17 @@ const SideCardsCircle = ({ ...props }) => {
           md={6}
           style={{ marginLeft: "auto", marginRight: "auto" }}
         >
-          <h3>{title}</h3>
+          <h3 style={{color:'#041d4c'}} >{title}</h3>
           <br />
-          <p className="paragraph-circle"> {text} </p>
+          <p className="paragraph-circle" style={{color:'#546875'}}> {text} </p>
           <br />
           <a href={`${link}`} style={{ textDecoration: "none" }} >
-            <Button variant="contained" id="button" style={{ color: "black" }}>
+            <Button variant="contained" id="button" style={{ color: "white" }}>
               {buttonText} &nbsp;{" "}
               {buttonText?.startsWith("B") ? (
-                <LocalLibraryIcon style={{ color: "black" }} />
+                <LocalLibraryIcon style={{ color: "white" }} />
               ) : (
-                <ExploreIcon style={{ color: "black" }} />
+                <ExploreIcon style={{ color: "white" }} />
               )}
             </Button>
           </a>

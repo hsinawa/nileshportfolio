@@ -20,7 +20,7 @@ margin-right: auto;
 margin-top: 10%;
 float: left;
 color:'black';
-background-color: rgb(165, 165, 165);
+background-color: #91a6be;
 }
 
 @media screen and (max-width: 850px) {

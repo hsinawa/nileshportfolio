@@ -43,10 +43,22 @@
           "At 'Concept to Education,' we specialize in expert science coaching, serving students from 7th to 10th grade."
         ],
         [
-            "E-Learning",
-            "This coaching provides an exclusive app for students, enabling progress tracking, tests, and access to learning modules."
+          "E-Learning",
+          "This coaching provides an exclusive app for students, enabling progress tracking, tests, and access to learning modules."
         ]
       ]
     }
+  },
+  "Statistics": {
+    "name": "Achievements Backed by Impressive Statistics",
+    "paras": [
+      ["Experience", "Teaching since 1995, now with 28+ Years of experience"],
+      ["Total Students", "Shaped the career of 7000+ students till now"],
+      ["Remarkable Achievements", "More than 1500 students scored 90+ marks"],
+      [
+        "Statistics into Triumphs",
+        "More than 90% students gets above average marks every year"
+      ]
+    ]
   }
 }

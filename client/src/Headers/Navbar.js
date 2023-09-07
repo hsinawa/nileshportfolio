@@ -14,7 +14,9 @@ function Navbar() {
   };
 
   return (
-    <header id='navtop' >
+    <header id='navtop' 
+  //  style={{position:'fixed', width:'100%', zIndex:'2'}}
+     >
       {admin ? (
         <p>
           <a href="/admin">
@@ -48,14 +50,16 @@ function Navbar() {
         id="nav-styles"
         style={{ float: "right", marginRight: "-33%" }}
       >
+         <a href="/" id="navbar-item">
+          Home
+        </a>
+
         <a href="/about" id="navbar-item">
           About Us
         </a>
+       
         <a href="/products" id="navbar-item">
           Find Us
-        </a>
-        <a href="/products" id="navbar-item">
-          Blogs
         </a>
         <a href="/contact" id="navbar-item">
           Contact Us

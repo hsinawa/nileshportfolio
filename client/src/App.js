@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './Headers/Navbar';
 import TopScreen from './Screens/TopScreen';
+import AboutUs from './Screens/AboutUs';
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
       <Routes>
        <Route path='/' element={<TopScreen/>} ></Route>
+       <Route path='/about' element={<AboutUs/>} ></Route>
         
       </Routes>
       </BrowserRouter>

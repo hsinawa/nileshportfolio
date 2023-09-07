@@ -17,6 +17,7 @@ import SideCardsCircle from "../Components/sideCardsCircle";
 import maths from '../Images/maths.avif';
 import sci from '../Images/science.jpeg';
 import elearn from '../Images/elearn.jpeg';
+import SomeStatistics from "../Components/StatisticsSection";
 const UpperSection = () => {
   return (
     <Box
@@ -169,9 +170,9 @@ const WhatWeOffer = () => {
           </Grid>
           <Grid item xs={12} md={6}>
 
-             <SideCardsCircle title={textData.AboutUs.Offers.courses[0][0]} image={maths} text={textData.AboutUs.Offers.courses[0][1]} buttonText='Book Trail Class' link='/book' />
+             <SideCardsCircle title={textData.AboutUs.Offers.courses[0][0]} image={maths} text={textData.AboutUs.Offers.courses[0][1]} buttonText='Book Trail ' link='/book' />
              <br/><br/>
-             <SideCardsCircle title={textData.AboutUs.Offers.courses[1][0]} image={sci} text={textData.AboutUs.Offers.courses[1][1]} buttonText='Book Trail Class' link='/book' />
+             <SideCardsCircle title={textData.AboutUs.Offers.courses[1][0]} image={sci} text={textData.AboutUs.Offers.courses[1][1]} buttonText='Book Trail ' link='/book' />
              <br/><br/>
              <SideCardsCircle title={textData.AboutUs.Offers.courses[2][0]} image={elearn} text={textData.AboutUs.Offers.courses[2][1]} buttonText='Explore More' link='https://web.myc2e.com/login' />
           </Grid>
@@ -190,6 +191,9 @@ const AboutUs = () => {
       <br />
       <br />
       <WhatWeOffer />
+      <br />
+      <br />
+      <SomeStatistics />
     </div>
   );
 };

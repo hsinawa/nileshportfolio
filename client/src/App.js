@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './Headers/Navbar';
 import TopScreen from './Screens/TopScreen';
 import AboutUs from './Screens/AboutUs';
+import FindUs from './Screens/FindUs';
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
       <Routes>
        <Route path='/' element={<TopScreen/>} ></Route>
        <Route path='/about' element={<AboutUs/>} ></Route>
+       <Route path='/find' element={<FindUs/>} ></Route>
         
       </Routes>
       </BrowserRouter>

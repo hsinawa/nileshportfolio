@@ -8,6 +8,8 @@ import textData from "../Static/textFiles.json";
 import TypingText from "../Components/TypingTextEffect";
 import AboutUs from "./AboutUs";
 import MarketingComponent from "../Components/SuggestionComponent";
+import Reviews from "./Reviews";
+import FindUs from "./FindUs";
 
 
 const SctionalScreen = () => {
@@ -55,6 +57,10 @@ const TopScreen = () => {
       <SctionalScreen />
       <MarketingComponent />
       <AboutUs />
+      <br/><br/>
+      <Reviews />
+      <br/><br/>
+      <FindUs />
     </div>
   );
 };

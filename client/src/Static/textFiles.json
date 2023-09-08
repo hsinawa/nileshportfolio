@@ -60,5 +60,11 @@
         "More than 90% students gets above average marks every year"
       ]
     ]
+  },
+
+  "FindUs":{
+    "name":"Find Us",
+    "slogan":"Track Us Down for Top-Notch Coaching",
+    "address":"C4/194 Sector-36, Noida"
   }
 }

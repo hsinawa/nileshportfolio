@@ -58,7 +58,7 @@ function Navbar() {
           About Us
         </a>
        
-        <a href="/products" id="navbar-item">
+        <a href="/find" id="navbar-item">
           Find Us
         </a>
         <a href="/contact" id="navbar-item">

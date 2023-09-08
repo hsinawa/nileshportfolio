@@ -126,7 +126,14 @@ const LastScreenSection = () => {
           </Accordion>
         </section>
       </div>
-      <footer className="footer">hello</footer>
+      <footer className="footer">
+
+
+<a href='/developer' style={{textDecoration:'none', color:'white'}} >
+    Developer Details
+</a>
+
+      </footer>
     </div>
   );
 };

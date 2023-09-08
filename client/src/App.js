@@ -6,6 +6,7 @@ import AboutUs from './Screens/AboutUs';
 import FindUs from './Screens/FindUs';
 import ContactUs from './Screens/contactUs';
 import LastScreenSection from './Screens/LastScreenSection';
+import AboutDeveloper from './Components/DeveloperDetails';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
        <Route path='/about' element={<AboutUs/>} ></Route>
        <Route path='/find' element={<FindUs/>} ></Route>
        <Route path='/contact' element={<ContactUs/>} ></Route>
+       <Route path='/developer' element={<AboutDeveloper/>} ></Route>
         
       </Routes>
       </BrowserRouter>

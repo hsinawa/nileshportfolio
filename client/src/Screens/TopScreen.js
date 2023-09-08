@@ -10,6 +10,7 @@ import AboutUs from "./AboutUs";
 import MarketingComponent from "../Components/SuggestionComponent";
 import Reviews from "./Reviews";
 import FindUs from "./FindUs";
+import ContactUs from "./contactUs";
 
 
 const SctionalScreen = () => {
@@ -59,6 +60,8 @@ const TopScreen = () => {
       <AboutUs />
       <br/><br/>
       <Reviews />
+      <br/><br/>
+      <ContactUs />
       <br/><br/>
       <FindUs />
     </div>

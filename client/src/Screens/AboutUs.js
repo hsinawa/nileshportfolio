@@ -104,7 +104,7 @@ const WhyUs = () => {
         style={{
           textAlign: "justify",
           color: "#000249",
-          width: "85%",
+          width: "100%",
           marginLeft: "auto",
           marginRight: "auto",
         }}

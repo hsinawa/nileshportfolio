@@ -4,6 +4,7 @@ const TrailClassSchema = mongoose.Schema({
     name:{
         type: String,
         require: [true, "Name of Student"],
+        trim:true
     } ,
 
     contact:{

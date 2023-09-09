@@ -10,7 +10,10 @@ import AboutDeveloper from './Components/DeveloperDetails';
 import SuccessPage from './Components/successScreen';
 import ErrorPage from './Screens/errorPage';
 import BookTrialClasses from './Screens/bookTrials';
+import AdminLogin from './Admin/adminLogin';
+import AdminPage from './Admin/adminPage';
 function App() {
+ const admin = localStorage.getItem("admin")
   return (
     <div className="App">
      <Navbar />
@@ -23,6 +26,10 @@ function App() {
        <Route path='/contact' element={<ContactUs/>} ></Route>
        <Route path='/developer' element={<AboutDeveloper/>} ></Route>
        <Route path='/book' element={<BookTrialClasses/>} ></Route>
+       <Route path='/adminlogin' element={<AdminLogin/>} ></Route>
+
+{admin? (<Route path='/admin' element={<AdminPage/>} ></Route>) :null}
+
        <Route path='/success' element={<SuccessPage/>} ></Route>
        <Route path='/error' element={<ErrorPage/>} ></Route>
         

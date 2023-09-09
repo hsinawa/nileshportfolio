@@ -13,7 +13,7 @@ router.post("/bookclass", async (req, res) => {
         contact: req.body.contact,
         standard: req.body.standard,
         subject:req.body.subject,
-        date:req.body.date
+        date:req.body.date?.substr(0,10)
       });
   
       await enq.save();

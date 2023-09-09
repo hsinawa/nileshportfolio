@@ -5,6 +5,7 @@ const taskModel = mongoose.Schema(
     name: {
       type: String,
       require: [true, "Name of Task"],
+      trim:true
     },
 
     deadline: {

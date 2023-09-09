@@ -158,7 +158,7 @@ const ContactUs = () => {
                     marginRight: "auto",
                   }}
                 >
-                   {loading ? <Loader2 /> : <p>SEND <SendIcon /> </p>}
+                   {loading ? <Loader2 /> : <p>SEND <SendIcon style={{verticalAlign:'-5px'}} /> </p>}
                 
                 </Button>
               </Grid>

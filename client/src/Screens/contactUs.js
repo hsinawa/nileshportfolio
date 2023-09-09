@@ -4,11 +4,13 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 //Static files
 import textData from "../Static/textFiles.json";
 import { messageContactAction } from "../Actions/messageAction";
+import {PostEnqReducer} from '../Reducers/messageReducer'
+import Loader2 from "../Components/Loader";
 
 const ContactUs = () => {
   const [number, setnumber] = useState("");
@@ -16,6 +18,8 @@ const ContactUs = () => {
   const [message, setmessage] = useState("");
 
   const dispatch = useDispatch();
+  const trialReducer = useSelector((state) => state.PostEnqReducer);
+  const { loading } = trialReducer;
 
   const SubmitContact = (e) => {
     e.preventDefault();
@@ -154,7 +158,8 @@ const ContactUs = () => {
                     marginRight: "auto",
                   }}
                 >
-                  Send <SendIcon />
+                   {loading ? <Loader2 /> : <p>SEND <SendIcon /> </p>}
+                
                 </Button>
               </Grid>
             </Grid>

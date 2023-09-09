@@ -3,14 +3,14 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const TrailClass = require ('../models/trialClassModel')
 
-router.post("/postEnq", async (req, res) => {
+router.post("/bookclass", async (req, res) => {
   
     try {
       const docs = await TrailClass.find({});
   
       const enq = new TrailClass({
         name: req.body.name,
-        contact: req.body.number,
+        contact: req.body.contact,
         standard: req.body.standard,
         subject:req.body.subject,
         date:req.body.date

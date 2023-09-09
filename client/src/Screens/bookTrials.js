@@ -3,15 +3,16 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import './Calendar.css'; // Import your custom styles
-
-
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "./Calendar.css"; // Import your custom styles
+import { TrailClassContactAction } from "../Actions/trialClassAction";
+import { PostTrailClassReducer } from "../Reducers/trialClassReducer";
+import Loader2 from "../Components/Loader";
 
 const BookTrialClasses = () => {
   const [number, setnumber] = useState("");
@@ -25,10 +26,12 @@ const BookTrialClasses = () => {
     setSelectedDate(date);
   };
 
-  const minDate = new Date(); // Minimum date is today
+  const trialReducer = useSelector((state) => state.PostTrailClassReducer);
+  const { loading } = trialReducer;
+
+  const minDate = new Date();
   const maxDate = new Date();
   maxDate.setDate(maxDate.getDate() + 14);
-
 
   const dispatch = useDispatch();
   const SubmitTrailClass = (e) => {
@@ -38,8 +41,10 @@ const BookTrialClasses = () => {
       contact: number,
       standard: standard,
       subject: subject,
-      date:selectedDate.substr(0,10)
+      date: selectedDate,
     };
+
+    dispatch(TrailClassContactAction(data));
   };
 
   return (
@@ -202,20 +207,17 @@ const BookTrialClasses = () => {
                 md={12}
                 style={{ marginLeft: "auto", marginRight: "auto" }}
               >
-
-<div className='calendar-container'>
-      
-      <div>
-        <Calendar
-          onChange={handleDateChange}
-          value={selectedDate}
-          minDate={minDate}
-          maxDate={maxDate}
-          className='react-calendar'
-        />
-      </div>
-      <p>Selected date: {selectedDate.toDateString()}</p>
-    </div>
+                <div className="calendar-container">
+                  <div>
+                    <Calendar
+                      onChange={handleDateChange}
+                      value={selectedDate}
+                      minDate={minDate}
+                      maxDate={maxDate}
+                      className="react-calendar"
+                    />
+                  </div>
+                </div>
               </Grid>
               <Grid
                 item
@@ -236,7 +238,7 @@ const BookTrialClasses = () => {
                     marginRight: "auto",
                   }}
                 >
-                  Send
+                  {loading ? <Loader2 /> : <p>SEND</p>}
                 </Button>
               </Grid>
             </Grid>

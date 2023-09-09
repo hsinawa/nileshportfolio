@@ -2,8 +2,15 @@ import { combineReducers } from "redux";
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+import {PostEnqReducer, GetAllEnqReducer} from './Reducers/messageReducer';
+import {PostTrailClassReducer,GetAllTrialClassReducer} from './Reducers/trialClassReducer';
 
-const FinalReducer = combineReducers({});
+const FinalReducer = combineReducers({
+  GetAllEnqReducer:GetAllEnqReducer,
+  PostEnqReducer:PostEnqReducer,
+  PostTrailClassReducer:PostTrailClassReducer,
+  GetAllTrialClassReducer:GetAllTrialClassReducer
+});
 
 const InitialState = {};
 

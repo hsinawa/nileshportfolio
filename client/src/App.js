@@ -8,6 +8,8 @@ import ContactUs from './Screens/contactUs';
 import LastScreenSection from './Screens/LastScreenSection';
 import AboutDeveloper from './Components/DeveloperDetails';
 import SuccessPage from './Components/successScreen';
+import ErrorPage from './Screens/errorPage';
+import BookTrialClasses from './Screens/bookTrials';
 function App() {
   return (
     <div className="App">
@@ -20,7 +22,9 @@ function App() {
        <Route path='/find' element={<FindUs/>} ></Route>
        <Route path='/contact' element={<ContactUs/>} ></Route>
        <Route path='/developer' element={<AboutDeveloper/>} ></Route>
+       <Route path='/book' element={<BookTrialClasses/>} ></Route>
        <Route path='/success' element={<SuccessPage/>} ></Route>
+       <Route path='/error' element={<ErrorPage/>} ></Route>
         
       </Routes>
       </BrowserRouter>

@@ -1,0 +1,63 @@
+/* Calendar.module.css */
+
+/* Calendar container */
+.calendar-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar header */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Month and year text */
+.react-calendar__navigation__label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Calendar days */
+.react-calendar {
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+}
+
+/* Calendar tile (each day) */
+.react-calendar__tile {
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Selected day */
+.react-calendar__tile--active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Today's date */
+.react-calendar__tile--now {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+/* Disabled dates */
+.react-calendar__tile--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

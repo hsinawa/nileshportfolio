@@ -8,6 +8,12 @@ const taskModel = mongoose.Schema(
       trim: true,
     },
 
+    id:{
+      type: String,
+      require: [true, "Id of User"],
+      trim: true,
+    },
+
     status: {
       type: Boolean,
       require: [true, "Status of Task"],

@@ -1,40 +1,58 @@
-import axios from "axios";
+const Task_Req = "Task_Req";
+const Task_Suc = "Task_Suc";
+const Task_Fail = "Task_Fail";
 
-export const RegisterNewAdmin = (user) => (dispatch) => {
-  dispatch({ type: "Admin_Register_Request" });
+export const AddTaskReducer = (state = {}, action) => {
+  switch (action.type) {
+    case `${Task_Req}`:
+      return {
+        ...state,
+        loading: true,
+      };
 
-  axios
-    .post("/api/admin/register", user)
-    .then((res) => {
-      dispatch({ type: "Admin_Register_Success" });
-      localStorage.setItem("admin", JSON.stringify(res.data));
-      window.location.href = "/admin";
-    })
-    .catch((err) => {
-      dispatch({ type: "Admin_Register_Failed", payload: err });
-    });
+    case `${Task_Suc}`:
+      return {
+        ...state,
+        loading: false,
+        Blogdata: action.payload,
+      };
+
+    case `${Task_Fail}`:
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        Blogdata: action.payload,
+      };
+
+    default:
+      return state;
+  }
 };
 
-export const AdminLoginAction = (admin) => (dispatch) => {
-  dispatch({ type: "Admin_Login_Request" });
+export const GetTaskReducer = (state = { tasks: [] }, action) => {
+  switch (action.type) {
+    case Task_Req:
+      return {
+        ...state,
+        loadingtask: true,
+      };
 
-  axios
-    .post("/api/admin/login", admin)
-    .then((res) => {
-      dispatch({ type: "Admin_Login_Success" });
-    
-      localStorage.setItem("admin", JSON.stringify(res.data));
-      window.location.href = "/admin";
-    })
-    .catch((err) => {
-     
-      dispatch({ type: "Admin_Login_Failed", payload: err });
-    });
-};
+    case Task_Suc:
+      return {
+        ...state,
+        loadingtask: false,
+        tasks: action.payload,
+      };
 
-export const LogOutAdmin = () => (dispatch) => {
-  localStorage.removeItem("admin");
+    case Task_Fail:
+      return {
+        ...state,
+        loadingtask: true,
+        error: false,
+      };
 
-  dispatch({ type: "User_LogOut" });
-  window.location.href = "/";
+    default:
+      return state;
+  }
 };

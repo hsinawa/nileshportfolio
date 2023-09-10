@@ -2,18 +2,21 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const TrailClass = require ('../models/trialClassModel')
+const moment = require('moment-timezone');
 
 router.post("/bookclass", async (req, res) => {
   
     try {
       const docs = await TrailClass.find({});
+      const utcTimestamp = `${new Date(req.body.cdate)}`
+      const istTimestamp = moment.utc(utcTimestamp).tz('Asia/Kolkata').format();
   
       const enq = new TrailClass({
         name: req.body.name,
         contact: req.body.contact,
         standard: req.body.standard,
         subject:req.body.subject,
-        date:req.body.date?.substr(0,10)
+        date: istTimestamp?.toString().substr(0, 10),
       });
   
       await enq.save();
@@ -22,7 +25,7 @@ router.post("/bookclass", async (req, res) => {
   
       res.send({ message: "Message Sent Successfully" });
     } catch (err) {
-      console.log('Error is',err)
+      
       res.status(400).json({ message: `Something Went Wrong ${err} ` });
     }
   });

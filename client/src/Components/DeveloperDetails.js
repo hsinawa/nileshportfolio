@@ -67,7 +67,7 @@ const AboutDeveloper = () => {
         </Grid>
 
         <Grid item xs={2} md={2}>
-          <p title="Twitter">
+          <p title="Github">
             <a
               href={`https://github.com/hsinawa`}
               target="_blank"

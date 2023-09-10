@@ -19,11 +19,11 @@ app.use("/api/message/", messageRoute);
 app.use("/api/task/", taskRoutes);
 app.use("/api/trialclass/", trailClassRoutes);
 
-// app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 const port = process.env.PORT || 4194;
 

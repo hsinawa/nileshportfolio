@@ -3,10 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const EnquireSchema = require("../models/messageModel");
 
-
-
 router.post("/postEnq", async (req, res) => {
-  
   try {
     const docs = await EnquireSchema.find({});
 
@@ -18,11 +15,9 @@ router.post("/postEnq", async (req, res) => {
 
     await enq.save();
 
-
-
     res.send({ message: "Message Sent Successfully" });
   } catch (err) {
-    console.log('Error is',err)
+    
     res.status(400).json({ message: `Something Went Wrong ${err} ` });
   }
 });

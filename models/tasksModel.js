@@ -8,7 +8,7 @@ const taskModel = mongoose.Schema(
       trim: true,
     },
 
-    id:{
+    id: {
       type: String,
       require: [true, "Id of User"],
       trim: true,
@@ -20,25 +20,17 @@ const taskModel = mongoose.Schema(
       default: false,
     },
 
-    deadline: {
-      date: {
-        type: String,
-        require: [true, "Value of Date"],
-      },
-
-      day: {
-        type: String,
-        require: [true, "Value of Day"],
-      },
-      month: {
-        type: String,
-        require: [true, "Value of Month"],
-      },
-      year: {
-        type: String,
-        require: [true, "Value of Year"],
-      },
+    datetest: {
+      type: String,
+      require: [true, "Value of Date"],
     },
+
+    comment:{
+      type: String,
+      require: [true, "Value of Date"],
+      trim:true
+    }
+   
   },
   { timestamps: true }
 );

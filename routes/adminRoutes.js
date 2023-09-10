@@ -41,7 +41,7 @@ router.post("/register", (req, res) => {
           name: docs[0].name,
           _id: docs[0]._id,
           email: docs[0].email,
-          lname: "admin"
+          lname: docs[0].lname
         };
         
         

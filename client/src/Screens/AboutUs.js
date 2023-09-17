@@ -18,6 +18,7 @@ import maths from "../Images/maths.avif";
 import sci from "../Images/science.jpeg";
 import elearn from "../Images/elearn.jpeg";
 import SomeStatistics from "../Components/StatisticsSection";
+import SATImg from '../Images/SAT.png'
 const UpperSection = () => {
   return (
     <Box
@@ -115,7 +116,7 @@ const WhyUs = () => {
         style={{
           textAlign: "justify",
           color: "#000249",
-          width: "100%",
+          width: "85%",
           marginLeft: "auto",
           marginRight: "auto",
         }}
@@ -212,6 +213,35 @@ const WhatWeOffer = () => {
   );
 };
 
+const SAT = () =>{
+  return (
+    <Box sx={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    
+
+      <Grid item xs={12} sm={6}>
+        <div>
+          <h2 style={{color:'#041E42'}} > {textData.SAT.name} </h2>
+          <br/><br/>
+          <p style={{
+          textAlign: "justify",
+          color: "#101010",
+          width: "85%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }} > {textData.SAT.paragraph} </p>
+        </div>
+      </Grid>
+
+      <Grid item xs={12} sm={6}>
+    <img src={SATImg} id="image-about" alt='Src:Google' title='Src:Google' />
+    </Grid>
+     
+    </Grid>
+  </Box>
+  )
+}
+
 const AboutUs = () => {
   return (
     <div>
@@ -221,6 +251,9 @@ const AboutUs = () => {
       <br />
       <br />
       <WhatWeOffer />
+      <br />
+      <br />
+      <SAT/>
       <br />
       <br />
       <SomeStatistics />

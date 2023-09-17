@@ -33,6 +33,18 @@ export const GetAllTaskById = (data) => (dispatch) => {
     });
 };
 
+export const GetAllTaskById2 = (data) => (dispatch) => {
+  dispatch({ type: Task_Req });
+  axios
+    .post(`${Task_API}/getall2`, data)
+    .then((res) => {
+      dispatch({ type: Task_Suc, payload: res.data });
+    })
+    .catch((err) => {
+      dispatch({ type: Task_Fail, payload: err });
+    });
+};
+
 const TaskUpdate_Req = "TaskUpdate_Req";
 const TaskUpdate_Suc = "TaskUpdate_Suc";
 const TaskUpdate_Fail = "TaskUpdate_Fail";

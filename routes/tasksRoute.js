@@ -29,9 +29,26 @@ router.post("/addtask", async (req, res) => {
 router.post("/getall", async (req, res) => {
   try {
     const getDate = req.body.date?.toString().substr(0, 10);
-
+    console.log("Date is", getDate);
     const docs = await Task.find({ id: req.body._id, datetest: getDate });
+    console.log("Docs are", docs);
+    res.send(docs);
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ message: "Something Went Wrong" });
+  }
+});
 
+router.post("/getall2", async (req, res) => {
+  try {
+    const utcTimestamp = `${new Date(req.body.date)}`;
+    const istTimestamp = moment.utc(utcTimestamp).tz("Asia/Kolkata").format();
+    console.log("Date is", istTimestamp?.toString().substr(0, 10));
+    const docs = await Task.find({
+      id: req.body._id,
+      datetest: istTimestamp?.toString().substr(0, 10),
+    });
+    console.log("Docs are", docs);
     res.send(docs);
   } catch (err) {
     console.error(err);
@@ -41,11 +58,13 @@ router.post("/getall", async (req, res) => {
 
 router.post("/update", async (req, res) => {
   try {
-    
-    const {id,status} = req.body ;
-   
+    const { id, status } = req.body;
 
-    const updatedTask = await Task.findByIdAndUpdate(id, { status: !status }, { new: true });
+    const updatedTask = await Task.findByIdAndUpdate(
+      id,
+      { status: !status },
+      { new: true }
+    );
 
     res.send(updatedTask);
   } catch (err) {

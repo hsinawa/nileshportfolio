@@ -16,6 +16,7 @@ import GetAllMessages from "./Admin/MessagesGetAll";
 import TrailClassGetAll from "./Admin/trialclassGetAll";
 import ToDoList from "./Components/toDoList";
 import UploadResult from "./Components/resultUpload";
+import CheckFutureSchedule from "./Admin/futureSchedule";
 function App() {
   const admin = localStorage.getItem("admin");
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="/developer" element={<AboutDeveloper />}></Route>
           <Route path="/book" element={<BookTrialClasses />}></Route>
           <Route path="/adminlogin" element={<AdminLogin />}></Route>
-
+          {admin ? <Route path="/futureSchedule" element={<CheckFutureSchedule />}></Route> : null}
           {admin ? <Route path="/admin" element={<AdminPage />}></Route> : null}
            <Route path="/results" element={<UploadResult />}></Route> 
           {admin ? <Route path="/todo" element={<ToDoList />}></Route> : null}

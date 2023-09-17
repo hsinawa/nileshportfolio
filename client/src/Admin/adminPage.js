@@ -90,11 +90,75 @@ const AdminPage = () => {
               },
             }}
           >
+           <Button variant="outlined" href="/results">
+            Results
+          </Button>
+          </Grid>
+
+
+          <Grid
+            item
+            xs={10}
+            md={5}
+            lg={3}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+            sx={{
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          >
+           <Button variant="outlined" href="/futureSchedule">
+            Check Schedule
+          </Button>
+          </Grid>
+         
+          <Grid
+            item
+            xs={10}
+            md={5}
+            lg={3}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+            sx={{
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          >
             <Button variant="outlined" color="error" onClick={ (e)=>{
                 dispatch(LogOutAdmin())
             } } >
             Logout
           </Button>
+          </Grid>
+          <Grid
+            item
+            xs={10}
+            md={5}
+            lg={3}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+            sx={{
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          >
+           
+          </Grid>
+
+          <Grid
+            item
+            xs={10}
+            md={5}
+            lg={3}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+            sx={{
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          >
+           
           </Grid>
         </Grid>
       </Box>

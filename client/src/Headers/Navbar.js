@@ -65,6 +65,11 @@ function Navbar() {
           Contact Us
         </a>
 
+        <a href="/results" id="navbar-item">
+          Results
+        </a>
+
+
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

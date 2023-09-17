@@ -6,16 +6,17 @@ const Result_Fail = "Result_Fail";
 const Result_API = "/api/results";
 
 export const resultAddAction = (data) => (dispatch) => {
-  dispatch({ type: Task_Req });
+    alert('Hereeeee')
+  dispatch({ type: Result_Req });
   axios
-    .post(`${Task_API}/addresult`, data)
+    .post(`${Result_API}/addresult`, data)
     .then((res) => {
-      dispatch({ type: Task_Suc });
+      dispatch({ type: Result_Suc });
       alert("Added Successfully");
       window.location.reload();
     })
     .catch((err) => {
-      dispatch({ type: Task_Fail, payload: err });
+      dispatch({ type: Result_Fail, payload: err });
 
       window.location.href = "/error";
     });

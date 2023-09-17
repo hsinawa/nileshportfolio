@@ -5,12 +5,13 @@ const EnquireSchema = require("../models/messageModel");
 const Result = require("../models/resultModel");
 
 router.post("/addresult", async (req, res) => {
+  console.log('Hereee')
   try {
     const docs = await Result.find({});
-
+    console.log('Working', req.body.resultURL)
     const enq = new Result({
       name: req.body.name,
-      resultURL: req.body.url,
+      resultURL: req.body.resultURL,
       standard: req.body.standard,
     });
 
@@ -34,3 +35,4 @@ router.post("/addresult", async (req, res) => {
 //       res.status(400).json({ message: "Something Went Wrong" });
 //     }
 //   });
+module.exports = router;

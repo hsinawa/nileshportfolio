@@ -8,7 +8,11 @@ import {
 } from "firebase/storage";
 import { storage } from "../firebase";
 
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { useDispatch } from "react-redux";
+import { resultAddAction } from "../Actions/resultAction";
 
 const UploadResult = () => {
   const [pdfUpload, setpdfUpload] = useState(null);
@@ -16,44 +20,91 @@ const UploadResult = () => {
   const [resultURL, setresultURL] = useState("");
   const [name, setname] = useState("");
   const [standard, setstandard] = useState("");
-
+  const admin = localStorage.getItem("admin");
   const imagesListRef = ref(storage, "pdf/");
-  
-  const AddResult = (e)=>{
-      e.preventDefault();
-      if (pdfUpload == null) return;
-      const imageRef = ref(storage, `results/${pdfUpload.name}-${standard}`);
-      uploadBytes(imageRef, pdfUpload).then((snapshot) => {
-        getDownloadURL(snapshot.ref).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-          alert('Added')
-   });
-      });
-  }
+const dispatch = useDispatch()
+  const AddResult = async (e) => {
 
+    e.preventDefault();
+    
+
+    try {
+        if (pdfUpload == null) return;
+        const imageRef = ref(storage, `results/${pdfUpload.name}-${standard}`);
+        const snapshot = await uploadBytes(imageRef, pdfUpload);
+        const url = await getDownloadURL(snapshot.ref);
+    
+        setImageUrls((prev) => [...prev, url]);
+        setresultURL(url);
+    
+        const data = {
+          name: name,
+          resultURL: url, // Use the URL from the previous await
+          standard: standard,
+        };
+    
+        await dispatch(resultAddAction(data));
+      } catch (error) {
+        alert( error);
+      }
+      
+
+    
+  };
 
   return (
     <React.Fragment>
-      Upload Results here
+      {admin && (
+        <div>
+          Upload Results here
+          <form onSubmit={AddResult}>
+            <TextField
+              id="outlined-basic"
+              label="Enter Name"
+              variant="outlined"
+              autoComplete="off"
+              type="text"
+              required
+              value={name}
+              style={{
+                width: "90%",
+              }}
+              onChange={(e) => {
+                setname(e.target.value);
+              }}
+            />
 
-      <form onSubmit={AddResult} >
-      <input
-        type="file"
-        onChange={(event) => {
-          setpdfUpload(event.target.files[0]);
-        }}
-      />
+            <br />
+            <br />
 
-      <button type='submit' value='submit' >SUBMIT</button>
+            <TextField
+              id="outlined-basic"
+              label="Enter Standard"
+              variant="outlined"
+              autoComplete="off"
+              type="text"
+              required
+              value={standard}
+              style={{
+                width: "90%",
+              }}
+              onChange={(e) => {
+                setstandard(e.target.value);
+              }}
+            />
+            <input
+              type="file"
+              onChange={(event) => {
+                setpdfUpload(event.target.files[0]);
+              }}
+            />
 
+            <button type="submit" value="submit">
+              SUBMIT
+            </button>
           </form>
-     
-      {/* <button onClick={uploadFile}> Upload Report</button> */}
-
-      {imageUrls.map((url) => {
-        return <img src={url} />;
-      })}
-
+        </div>
+      )}
     </React.Fragment>
   );
 };

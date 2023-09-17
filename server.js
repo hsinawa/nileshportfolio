@@ -18,7 +18,7 @@ app.use("/api/admin/", AdminRoute);
 app.use("/api/message/", messageRoute);
 app.use("/api/task/", taskRoutes);
 app.use("/api/trialclass/", trailClassRoutes);
-app.use("/api/results/", trailClassRoutes);
+app.use("/api/results/", ResultsRoutes);
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 

@@ -166,7 +166,7 @@ router.post("/postEnq", async (req, res) => {
      
       const msg2 = {
         from: process.env.Email,
-        to: `awanishmishra003@gmail.com`,
+        to: `nilesh3900@gmail.com`,
         subject: `Messaged Received`,
         html:HTMLtemplateSender,
       };

@@ -11,13 +11,14 @@ const AdminRoute = require("./routes/adminRoutes");
 const messageRoute = require("./routes/messageRoutes");
 const taskRoutes = require("./routes/tasksRoute");
 const trailClassRoutes = require("./routes/trailClassRoutes");
-
+const ResultsRoutes = require('./routes/resultRoutes')
 
 
 app.use("/api/admin/", AdminRoute);
 app.use("/api/message/", messageRoute);
 app.use("/api/task/", taskRoutes);
 app.use("/api/trialclass/", trailClassRoutes);
+app.use("/api/results/", trailClassRoutes);
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 

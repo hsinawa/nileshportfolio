@@ -89,8 +89,8 @@ router.post("/bookclass", async (req, res) => {
 
     const msg2 = {
       from: process.env.Email,
-     // to: `nilesh3900@gmail.com`,
-     to:`awanishmishra003@gmail.com`,
+      to: `nilesh3900@gmail.com`,
+     
       subject: `New Trial Class`,
       html: HTMLtemplateSender,
     };

@@ -13,7 +13,7 @@ const EnquireSchema = mongoose.Schema({
         trim:true
       },
       contact: {
-        type: Number,
+        type: String,
         require: [true, "Enter Your Contact Number"],
        
       }

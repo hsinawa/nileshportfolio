@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 //Static files
 import textData from "../Static/textFiles.json";
 import { messageContactAction } from "../Actions/messageAction";
-import {PostEnqReducer} from '../Reducers/messageReducer'
+import { PostEnqReducer } from "../Reducers/messageReducer";
 import Loader2 from "../Components/Loader";
 
 const ContactUs = () => {
@@ -92,19 +92,17 @@ const ContactUs = () => {
               >
                 <TextField
                   id="outlined-basic"
-                  label="Enter Number"
+                  label="Enter Email"
                   variant="outlined"
                   autoComplete="off"
-                  type="text"
-                  required
+                  type="email" 
+                  required 
                   style={{
                     width: "90%",
                   }}
                   value={number}
                   inputProps={{
-                    maxLength: 12,
-                    minLength: 10,
-                    pattern: "^[0-9\\s\\-]+$",
+                    pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}", 
                   }}
                   onChange={(e) => {
                     setnumber(e.target.value);
@@ -158,8 +156,13 @@ const ContactUs = () => {
                     marginRight: "auto",
                   }}
                 >
-                   {loading ? <Loader2 /> : <p>SEND <SendIcon style={{verticalAlign:'-5px'}} /> </p>}
-                
+                  {loading ? (
+                    <Loader2 />
+                  ) : (
+                    <p>
+                      SEND <SendIcon style={{ verticalAlign: "-5px" }} />{" "}
+                    </p>
+                  )}
                 </Button>
               </Grid>
             </Grid>

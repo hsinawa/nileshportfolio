@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import './screen.css'
+import "./screen.css";
 
 //Static Files
 import logo from "../Images/logo.jpeg";
@@ -14,9 +14,9 @@ import faculty from "../Images/faculty.avif";
 import interactive from "../Images/interactive.avif";
 import coaching from "../Images/coaching.avif";
 import SideCardsCircle from "../Components/sideCardsCircle";
-import maths from '../Images/maths.avif';
-import sci from '../Images/science.jpeg';
-import elearn from '../Images/elearn.jpeg';
+import maths from "../Images/maths.avif";
+import sci from "../Images/science.jpeg";
+import elearn from "../Images/elearn.jpeg";
 import SomeStatistics from "../Components/StatisticsSection";
 const UpperSection = () => {
   return (
@@ -88,6 +88,13 @@ const UpperSection = () => {
           </a>
         </Grid>
       </Grid>
+
+      <iframe
+        src="https://drive.google.com/file/d/1-N0jgGSfJefA2Qdam_-oG1MQV-OXbMpc/preview"
+        className='frame'
+        allow="autoplay"
+
+      ></iframe>
     </Box>
   );
 };
@@ -155,26 +162,45 @@ const WhatWeOffer = () => {
               alt="Pool"
               title="src:google"
             />
-             <p
-        style={{
-          textAlign: "justify",
-          color: "#000249",
-          width: "85%",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      >
-        {" "}
-        {textData.AboutUs.Offers.para}{" "}
-      </p>
+            <p
+              style={{
+                textAlign: "justify",
+                color: "#000249",
+                width: "85%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              {" "}
+              {textData.AboutUs.Offers.para}{" "}
+            </p>
           </Grid>
           <Grid item xs={12} md={6}>
-
-             <SideCardsCircle title={textData.AboutUs.Offers.courses[0][0]} image={maths} text={textData.AboutUs.Offers.courses[0][1]} buttonText='Book Trail ' link='/book' />
-             <br/><br/>
-             <SideCardsCircle title={textData.AboutUs.Offers.courses[1][0]} image={sci} text={textData.AboutUs.Offers.courses[1][1]} buttonText='Book Trail ' link='/book' />
-             <br/><br/>
-             <SideCardsCircle title={textData.AboutUs.Offers.courses[2][0]} image={elearn} text={textData.AboutUs.Offers.courses[2][1]} buttonText='Explore More' link='https://web.myc2e.com/login' />
+            <SideCardsCircle
+              title={textData.AboutUs.Offers.courses[0][0]}
+              image={maths}
+              text={textData.AboutUs.Offers.courses[0][1]}
+              buttonText="Book Trial "
+              link="/book"
+            />
+            <br />
+            <br />
+            <SideCardsCircle
+              title={textData.AboutUs.Offers.courses[1][0]}
+              image={sci}
+              text={textData.AboutUs.Offers.courses[1][1]}
+              buttonText="Book Trial "
+              link="/book"
+            />
+            <br />
+            <br />
+            <SideCardsCircle
+              title={textData.AboutUs.Offers.courses[2][0]}
+              image={elearn}
+              text={textData.AboutUs.Offers.courses[2][1]}
+              buttonText="Explore More"
+              link="https://web.myc2e.com/login"
+            />
           </Grid>
         </Grid>
       </Box>

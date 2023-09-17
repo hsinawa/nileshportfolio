@@ -8,10 +8,10 @@ router.post("/bookclass", async (req, res) => {
   
     try {
       const docs = await TrailClass.find({});
-      const utcTimestamp = `${new Date(req.body.cdate)}`
+      const utcTimestamp = `${new Date(req.body.date)}`
       const istTimestamp = moment.utc(utcTimestamp).tz('Asia/Kolkata').format();
-  
-      const enq = new TrailClass({
+
+        const enq = new TrailClass({
         name: req.body.name,
         contact: req.body.contact,
         standard: req.body.standard,

@@ -8,7 +8,7 @@ router.post("/addresult", async (req, res) => {
   console.log('Hereee')
   try {
     const docs = await Result.find({});
-    console.log('Working', req.body.resultURL)
+    
     const enq = new Result({
       name: req.body.name,
       resultURL: req.body.resultURL,
@@ -23,16 +23,16 @@ router.post("/addresult", async (req, res) => {
   }
 });
 
-//   router.post("/getall", async (req, res) => {
-//     try {
-//       const getDate = req.body.date?.toString().substr(0, 10);
+  router.get("/getall", async (req, res) => {
+    try {
+     
 
-//       const docs = await Task.find({ id: req.body._id, datetest: getDate });
+      const docs = await Result.find({ });
 
-//       res.send(docs);
-//     } catch (err) {
-//       console.error(err);
-//       res.status(400).json({ message: "Something Went Wrong" });
-//     }
-//   });
+      res.send(docs);
+    } catch (err) {
+      console.error(err);
+      res.status(400).json({ message: "Something Went Wrong" });
+    }
+  });
 module.exports = router;

@@ -9,6 +9,7 @@ import {
   GetAllTrialClassReducer,
 } from "./Reducers/trialClassReducer";
 import { AddTaskReducer, GetTaskReducer } from "./Reducers/taskReducer";
+import {GetAllresultReducer} from './Reducers/resultReducer'
 
 const FinalReducer = combineReducers({
   GetAllEnqReducer: GetAllEnqReducer,
@@ -18,6 +19,7 @@ const FinalReducer = combineReducers({
   LoginAdminReducer: LoginAdminReducer,
   AddTaskReducer: AddTaskReducer,
   GetTaskReducer: GetTaskReducer,
+  GetAllresultReducer:GetAllresultReducer
 });
 
 const InitialState = {};

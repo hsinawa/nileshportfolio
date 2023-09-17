@@ -33,7 +33,7 @@ function App() {
           <Route path="/adminlogin" element={<AdminLogin />}></Route>
 
           {admin ? <Route path="/admin" element={<AdminPage />}></Route> : null}
-          {admin ? <Route path="/resultupload" element={<UploadResult />}></Route> : null}
+           <Route path="/results" element={<UploadResult />}></Route> 
           {admin ? <Route path="/todo" element={<ToDoList />}></Route> : null}
           {admin ? (
             <Route path="/trialclass" element={<TrailClassGetAll />}></Route>

@@ -27,8 +27,8 @@ const TrailClassGetAll = () => {
           <th>S.No</th>
           <th>Name</th>
           <th>Contact</th>
-          <th>School Name</th>
           <th>Class</th>
+          <th>Subject</th>
           <th>Booked For</th>
           <th>Booked On</th>
         </thead>

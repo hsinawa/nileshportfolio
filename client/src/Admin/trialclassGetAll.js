@@ -52,7 +52,7 @@ const TrailClassGetAll = () => {
                   <td data-label='Class' > {i.standard} </td>
                   <td data-label='Subject' > {i.subject} </td>
                   <td data-label='Booked For' > {i.date?.substr(0, 10)} </td>
-                  <td data-label='Booked On' > {i.createdAt?.substr(0, 10)} </td>
+                  <td data-label='Booked On' > { new Date(`${i.createdAt}`)?.toString().substr(0,15) } </td>
                 </tr>
               );
             })}

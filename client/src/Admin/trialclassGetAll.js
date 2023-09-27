@@ -27,19 +27,19 @@ const TrailClassGetAll = () => {
           <th>S.No</th>
           <th>Name</th>
           <th>Contact</th>
+          <th>School Name</th>
           <th>Class</th>
-          <th>Subject</th>
           <th>Booked For</th>
           <th>Booked On</th>
         </thead>
         <tbody>
           {trials &&
-            trials.reverse().map((i) => {
+            trials.reverse().map((i,key) => {
               return (
-                <tr>
-                  <td> {++count} </td>
-                  <td> {i.name} </td>
-                  <td>
+                <tr key={key} >
+                  <td data-label='S.No' > {++count} </td>
+                  <td data-label='Name' > {i.name} </td>
+                  <td data-label='Contact Number' >
                    
                     <a
                       herf={`tel:+91${i.contact}`}
@@ -49,10 +49,10 @@ const TrailClassGetAll = () => {
                       {i.contact}
                     </a>{" "}
                   </td>
-                  <td> {i.standard} </td>
-                  <td> {i.subject} </td>
-                  <td> {i.date?.substr(0, 10)} </td>
-                  <td> {i.createdAt?.substr(0, 10)} </td>
+                  <td data-label='Class' > {i.standard} </td>
+                  <td data-label='Subject' > {i.subject} </td>
+                  <td data-label='Booked For' > {i.date?.substr(0, 10)} </td>
+                  <td data-label='Booked On' > {i.createdAt?.substr(0, 10)} </td>
                 </tr>
               );
             })}

@@ -204,6 +204,7 @@ const WhatWeOffer = () => {
               image={elearn}
               text={textData.AboutUs.Offers.courses[2][1]}
               buttonText="Explore More"
+//Link
               link="https://web.classplusapp.com/login"
             />
           </Grid>
